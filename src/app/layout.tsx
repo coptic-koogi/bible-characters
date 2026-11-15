@@ -30,7 +30,7 @@ const readex = localFont({
 
 /** Absolute origin used for Open Graph / Twitter cards. */
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || `https://good-man-developer.github.io${BASE_PATH || "/bible-characters"}`;
+  process.env.NEXT_PUBLIC_SITE_URL || `https://coptic-koogi.github.io${BASE_PATH || "/bible-characters"}`;
 
 const TITLE = "Bible Characters Encyclopedia — 3,026 documented profiles, four languages, fully offline";
 const DESCRIPTION =
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   applicationName: "Bible Characters Encyclopedia",
-  authors: [{ name: "Beshoy Nabil", url: "https://github.com/good-man-developer" }],
+  authors: [{ name: "Beshoy Nabil", url: "https://github.com/coptic-koogi" }],
   creator: "Beshoy Nabil",
   publisher: "Coptic Koogi",
   keywords: [

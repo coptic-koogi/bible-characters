@@ -7,7 +7,7 @@
 3,026 characters & symbols · 4 languages · 100% offline
 
 [![Google Play](https://img.shields.io/badge/Google%20Play-Download-C9A75B?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.coptickoogi.shakhsyat_elketab_elmokadaas)
-[![Live demo](https://img.shields.io/badge/Live%20demo-Open%20the%20page-8A6D2F?style=for-the-badge&logo=githubpages&logoColor=white)](https://good-man-developer.github.io/bible-characters/)
+[![Live demo](https://img.shields.io/badge/Live%20demo-Open%20the%20page-8A6D2F?style=for-the-badge&logo=githubpages&logoColor=white)](https://coptic-koogi.github.io/bible-characters/)
 
 [![Characters](https://img.shields.io/badge/3%2C026-profiles-C9A75B?style=flat-square)](#)
 [![Languages](https://img.shields.io/badge/4-languages-8A6D2F?style=flat-square)](#)
@@ -129,7 +129,7 @@ The live page is **not a gallery of screenshots**. It is a miniature edition of 
 
 <div align="center">
 
-[![Open the live demo](https://img.shields.io/badge/Open%20the%20live%20demo-C9A75B?style=for-the-badge&logo=googlechrome&logoColor=111111)](https://good-man-developer.github.io/bible-characters/)
+[![Open the live demo](https://img.shields.io/badge/Open%20the%20live%20demo-C9A75B?style=for-the-badge&logo=googlechrome&logoColor=111111)](https://coptic-koogi.github.io/bible-characters/)
 
 </div>
 
@@ -151,7 +151,7 @@ The live page is **not a gallery of screenshots**. It is a miniature edition of 
 
 Built with **Next.js 16**, **React 19**, **TypeScript** and **Tailwind CSS 4** — and a great deal of care.
 
-Designed & developed by **[Beshoy Nabil](https://github.com/good-man-developer)** · Published by **Coptic Koogi**
+Designed & developed by **[Beshoy Nabil](https://github.com/coptic-koogi)** · Published by **Coptic Koogi**
 
 *“† Glory be to God forever. Amen. †”*
 

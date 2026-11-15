@@ -6,7 +6,7 @@
 const ANDROID_ID = 'com.coptickoogi.shakhsyat_elketab_elmokadaas';
 
 /** GitHub repository that hosts this landing page. */
-export const GITHUB_URL = 'https://github.com/good-man-developer/bible-characters';
+export const GITHUB_URL = 'https://github.com/coptic-koogi/bible-characters';
 
 export const PLAY_URL = `https://play.google.com/store/apps/details?id=${ANDROID_ID}`;
 
