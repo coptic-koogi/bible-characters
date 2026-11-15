@@ -1,140 +1,160 @@
-<div dir="rtl">
+<div align="center">
 
-# ✨ موسوعة شخصيات الكتاب المقدس — صفحة الهبوط والديمو
+# ✝️ Bible Characters Encyclopedia
 
-**نسخة ويب خفيفة من التطبيق، مصمَّمة خصيصاً كصفحة هبوط دعائية — ببيانات حقيقية من قاعدة بيانات التطبيق، وبأربع لغات كاملة.**
+**Every person in the Bible — their complete, documented story.**
 
-🔗 **الصفحة المنشورة:** <https://good-man-developer.github.io/bible-characters/>
-📱 **التطبيق على Google Play:** <https://play.google.com/store/apps/details?id=com.coptickoogi.shakhsyat_elketab_elmokadaas>
+3,026 characters & symbols · 4 languages · 100% offline
 
-[![Languages](https://img.shields.io/badge/لغات-4%20(عربي%20·%20EN%20·%20FR%20·%20ES)-C9A75B?style=flat-square)](#)
-[![Characters](https://img.shields.io/badge/شخصيات%20موثَّقة-3%2C026-8A6D2F?style=flat-square)](#)
-[![Offline](https://img.shields.io/badge/يعمل%20دون%20اتصال-100%25-2A7B7E?style=flat-square)](#)
-[![License](https://img.shields.io/badge/ترخيص-MIT-C9A75B?style=flat-square)](LICENSE)
+[![Google Play](https://img.shields.io/badge/Google%20Play-Download-C9A75B?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.coptickoogi.shakhsyat_elketab_elmokadaas)
+[![Live demo](https://img.shields.io/badge/Live%20demo-Open%20the%20page-8A6D2F?style=for-the-badge&logo=githubpages&logoColor=white)](https://good-man-developer.github.io/bible-characters/)
 
-[![لقطة من الصفحة](docs/screenshots/hero-ar-dark.png)](https://good-man-developer.github.io/bible-characters/)
+[![Characters](https://img.shields.io/badge/3%2C026-profiles-C9A75B?style=flat-square)](#)
+[![Languages](https://img.shields.io/badge/4-languages-8A6D2F?style=flat-square)](#)
+[![Offline](https://img.shields.io/badge/100%25-offline-2A7B7E?style=flat-square)](#)
+[![Rating](https://img.shields.io/badge/4.9%E2%98%85-799%20reviews-C9A75B?style=flat-square)](#)
+[![License](https://img.shields.io/badge/license-MIT-8A6D2F?style=flat-square)](LICENSE)
 
 </div>
 
 ---
 
-**A lightweight web edition of the app, purpose-built as an advertising landing page — with real data from the app's actual database, in four complete languages.**
+<div align="center">
 
-[![Next.js](https://img.shields.io/badge/Next.js-16-14110B?style=flat-square&logo=nextdotjs&logoColor=C9A75B)](https://nextjs.org)
-[![React](https://img.shields.io/badge/React-19-14110B?style=flat-square&logo=react&logoColor=C9A75B)](https://react.dev)
-[![Tailwind](https://img.shields.io/badge/Tailwind-4-14110B?style=flat-square&logo=tailwindcss&logoColor=C9A75B)](https://tailwindcss.com)
-[![Deploy](https://img.shields.io/badge/نشر-GitHub%20Pages%20تلقائي-8A6D2F?style=flat-square)](.github/workflows/deploy.yml)
+### A whole scriptural library, in your pocket
+
+From Adam in Eden to the last page of Revelation — **3,026 characters and symbols**, each with a fully documented profile: identity, lineage and era, the events that shaped them, the lessons they carry, and the legacy they left. Every event is cited by book, chapter and verse.
+
+No connection required. Ever.
+
+</div>
 
 ---
 
-<div dir="rtl">
+## ✨ Inside the app
 
-## 🕊️ ما هذه الصفحة؟
+<table>
+<tr>
+<td width="50%" valign="top">
 
-هذه هي **الصفحة الدعائية الرسمية** لتطبيق **«موسوعة شخصيات الكتاب المقدس»** (الإصدار 14.4) — أضخم موسوعة كتابية تفاعلية تعمل دون اتصال: **3,026 شخصية ورمزاً** بسِيَر كاملة موثَّقة، بأربع لغات.
+**📖 A complete encyclopedia**
+The largest collection of Bible characters ever assembled in one app — Old Testament, New Testament, the Twelve, the Seventy, the women of the Bible, and the unnamed men and women whose stories still speak.
 
-الصفحة ليست صوراً ثابتة — إنها **نسخة مصغَّرة حيَّة من التطبيق نفسه**:
+**🎙️ Synchronized text-to-speech**
+Listen with word-by-word highlighting, a floating player, adjustable speed and pitch, male or female voices, and a sleep timer. Close your eyes and let the story carry you.
 
-| في الصفحة | في التطبيق الكامل |
-|---|---|
-| 43 شخصية مختارة ببيانات حقيقية | 3,026 شخصية ورمزاً |
-| بحث فوري + فلاتر عهد وفئات | بحث فوق فهرس 83,000+ مدخل |
-| سيرة مصغَّرة (نبذة، معنى الاسم، أحداث، دروس، عائلة) | سيرة كاملة + شجرة عائلة + قراءة صوتية + مساعد ذكي |
-| 4 لغات بتبديل لحظي | 4 لغات بضغطة واحدة من أي شاشة |
+**🌳 The interactive family tree**
+15 documented houses, 307 members, up to 9 generations — from Adam's house to David's and the Holy Family, with connecting lines and detail cards.
 
-> 📊 **كل الأرقام موثَّقة** من ملفات قاعدة البيانات الفعلية للتطبيق (3026 ملف شخصية، 82 سفراً، 65 فئة، 103 رموز، 23 قسم المسيح).
+**🎨 A unique scene engine**
+Every character and symbol receives its own carefully composed illustration, plus hundreds of hand-curated scenes: the Ark, the Crossing, Daniel's den, the Nativity.
 
-## 🎯 أقسام الصفحة
+**🤖 A local AI assistant**
+Ask *"who is…?"*, compare two characters, or list the kings and prophets. It answers from the database itself — on the device, without a connection.
 
-- **الهيرو** — شعار النجمة القبطية، عدّادات متحركة، محاكاة هاتف بلقطات حقيقية تتناوب
-- **شريط الأسفار** — أسماء الأسفار الـ79 الموثَّقة تتحرك بلا نهاية
-- **الديمو الحي** — ابحث («موسى»، «David»، «Ruth»…)، صفِّ بحسب الفئة والعهد، وافتح السيرة الكاملة
-- **12 ميزة رئيسية** — من المساعد الذكي المحلي إلى شجرة العائلة التفاعلية
-- **جولة باللقطات** — 8 لقطات حقيقية تتبدل تلقائياً مع لغة الزائر
-- **قسم السيد المسيح والرموز** — 23 قسماً و103 رموز في 8 مجموعات حقيقية
-- **الجمهور والخصوصية والتنزيل** — بأزرار المتاجر الرسمية
+**🔍 Instant smart search**
+A living index of 83,000+ entries: names, epithets, descriptions and categories, filtered as you type — with full Arabic diacritic support.
 
-## 🌍 اللغات الأربع
+</td>
+<td width="50%" valign="top">
 
-| اللغة | الاتجاه | الخطوط |
+**🕊️ The complete Christ section**
+23 documented parts, from prophecy to the Second Coming: the incarnation, the journeys, the miracles and parables, the seven sayings from the cross, Passion Week, the resurrection and the ascension.
+
+**🔥 The symbols module**
+103 symbols in 8 groups — Revelation and heaven, Christ and the Church, the gods of the nations, the spirits of darkness — each with its theological meaning.
+
+**📅 Character of the Day**
+A Coptic calendar with Synaxarium feasts and a gentle daily reminder: a new life to meet every morning.
+
+**🗂️ Organization without equal**
+65 categories, 15 time periods, and ready-made indexes: apostles, disciples, women, the unnamed, biblical order, chronological order, by book and by category.
+
+**🎧 Your personal library**
+Favorites, bookmarks, folders, tags and notes — with undo and one-file backup & restore across devices.
+
+**🌙 Made for reading**
+11 themes, 10 embedded Arabic fonts, a strict night mode, and a distraction-free focus view. Read the way your eyes love.
+
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+
+## 📱 A look inside
+
+<img src="public/screenshots/en/01_encyclopedia.jpg" width="19%" alt="The encyclopedia" />
+<img src="public/screenshots/en/02_illustrated_scenes.jpg" width="19%" alt="Illustrated scenes" />
+<img src="public/screenshots/en/05_family_tree.jpg" width="19%" alt="The family tree" />
+<img src="public/screenshots/en/07_ai_assistant.jpg" width="19%" alt="The AI assistant" />
+<img src="public/screenshots/en/08_night_mode.jpg" width="19%" alt="Night mode" />
+
+</div>
+
+---
+
+## 🌍 Four languages, one tap
+
+| Language | Direction | Typography |
 |---|---|---|
-| العربية | RTL كامل | Amiri (عناوين) + Readex Pro (نصوص) — مدمجة ذاتياً |
+| العربية | Full RTL | Amiri (headings) + Readex Pro (text) |
 | English | LTR | Readex Pro |
 | Français | LTR | Readex Pro |
 | Español | LTR | Readex Pro |
 
-التبديل لحظي من أي مكان في الصفحة، مع حفظ التفضيل، وتحويل كامل للاتجاه والمحاذاة واللقطات.
-
-## 🚀 التشغيل محلياً
-
-```bash
-bun install        # أو: npm install
-bun run dev        # أو: npm run dev
-# افتح http://localhost:3000
-```
-
-## 📦 النشر على GitHub Pages
-
-المستودع يتضمن workflow جاهزاً (`.github/workflows/deploy.yml`) — النشر **تلقائي عند كل دفع إلى `main`**:
-
-1. ارفع المستودع إلى حسابك (انظر `publish.sh` أدناه)
-2. من إعدادات المستودع: **Settings → Pages → Build and deployment → Source: GitHub Actions** ← هذه الخطوة إلزامية
-3. بعد أول تشغيل ناجح للـ workflow ستُبنى الصفحة وتُنشر على `https://<username>.github.io/<repo>/`
-
-> ⚠️ إذا كانت `Source` مضبوطة على «Deploy from a branch» فسيعرض GitHub ملف `README.md` فقط بدل الصفحة الحقيقية.
-
-المسار الفرعي (`/bible-characters`) يُحسب تلقائياً من اسم المستودع داخل الـ workflow، ويُمرَّر للبناء عبر `NEXT_PUBLIC_BASE_PATH` — لذلك لا حاجة لتحرير أي ملف عند تغيير اسم المستودع.
-
-للنشر اليدوي في أي استضافة ثابتة:
-
-```bash
-NEXT_PUBLIC_BASE_PATH="" npm run build   # ينتج مجلد out/ كاملاً وجاهزاً للنشر
-npx serve out                            # معاينة محلية للنسخة المبنية
-```
-
-### النشر إلى حسابك بأمر واحد
-
-```bash
-bash publish.sh            # يتطلب gh CLI مسجَّل الدخول
-bash publish.sh USERNAME   # أو بدون gh بعد إنشاء مستودع فارغ
-```
-
-## 🗂️ بنية المشروع
-
-```
-├── .github/workflows/deploy.yml   # نشر GitHub Pages تلقائياً
-├── src/
-│   ├── app/                       # الصفحة الوحيدة (layout + page + globals.css)
-│   │   └── fonts/                 # خطوط عربية/لاتينية مدمجة (woff2)
-│   ├── components/landing/        # 10 مكونات: هيدر، هيرو، ديمو، مزايا، لقطات…
-│   ├── data/landing-data.json     # 🔥 بيانات حقيقية (43 شخصية × 4 لغات)
-│   └── lib/landing/               # الترجمات (4 لغات) + طبقة البيانات + الروابط
-├── public/
-│   └── screenshots/               # 32 لقطة حقيقية (4 لغات × 8)
-├── scripts/                       # توليد البيانات والأصول من التطبيق الأصلي
-└── docs/screenshots/              # لقطات للتوثيق
-```
-
-## 🔧 التخصيص
-
-| ماذا | أين |
-|---|---|
-| روابط المتاجر ومعرّف التطبيق | `src/lib/landing/links.ts` |
-| رابط GitHub (زر الهيدر/الفوتر) | `src/lib/landing/links.ts` → `GITHUB_URL` |
-| نصوص الواجهة (4 لغات) | `src/lib/landing/i18n.ts` |
-| الألوان والثيمات | `src/app/globals.css` (متغيرات `--gold-*`) |
-| إعادة توليد البيانات من التطبيق | `scripts/gen_landing_data.py` (يحتاج مجلد بيانات التطبيق) |
-
-## 🔒 الخصوصية
-
-الصفحة ثابتة بالكامل: لا تتبع، لا تحليلات، لا كوكيز — وحتى تفضيل اللغة والثيم يُحفظ محلياً على جهاز الزائر فقط.
-
-## 📄 الترخيص
-
-[MIT](LICENSE) — استخدم وعدِّل بحرية.
+Every screen, every profile, every citation — instantly translated, with the interface direction following the language.
 
 ---
 
-صُنعت بعناية فائقة لتسبيح اسم الله 🕊️
+<div align="center">
+
+## 🔢 Numbers that are real
+
+| 3,026 | 82 | 65 | 103 | 23 |
+|:---:|:---:|:---:|:---:|:---:|
+| characters & symbols | documented books | categories | biblical symbols | parts on Christ |
+
+*Every figure is drawn from the app's actual database — not an estimate.*
+
+</div>
+
+---
+
+## 🎬 Try it before you install
+
+The live page is **not a gallery of screenshots**. It is a miniature edition of the app running on a real sample of the database: search for *Moses*, *David* or *Ruth*, filter by testament and category, and open a full profile — right in the browser, in all four languages.
+
+<div align="center">
+
+[![Open the live demo](https://img.shields.io/badge/Open%20the%20live%20demo-C9A75B?style=for-the-badge&logo=googlechrome&logoColor=111111)](https://good-man-developer.github.io/bible-characters/)
+
+</div>
+
+---
+
+<div align="center">
+
+## 📥 Get the app
+
+[![Get it on Google Play](https://img.shields.io/badge/Google%20Play-Free-C9A75B?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.coptickoogi.shakhsyat_elketab_elmokadaas)
+
+**App Store — coming soon.**
+
+</div>
+
+---
+
+<div align="center">
+
+Built with **Next.js 16**, **React 19**, **TypeScript** and **Tailwind CSS 4** — and a great deal of care.
+
+Designed & developed by **[Beshoy Nabil](https://github.com/good-man-developer)** · Published by **Coptic Koogi**
+
+*“† Glory be to God forever. Amen. †”*
+
+<sub>MIT licensed · Free to use and adapt</sub>
 
 </div>

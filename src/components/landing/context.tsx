@@ -34,7 +34,10 @@ const LANG_KEY = 'bce.lang';
 const THEME_KEY = 'bce.theme';
 
 export function LandingProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>('ar');
+  // English-first: the landing page speaks to an international audience by
+  // default; Arabic (RTL) and the other languages are one tap away and the
+  // visitor's choice is remembered.
+  const [lang, setLangState] = useState<Lang>('en');
   const [theme, setTheme] = useState<Theme>('dark');
 
   // restore persisted preferences (client only — must run after hydration to
@@ -105,30 +108,79 @@ export function useLanding(): LandingCtx {
 
 /** Attach an IntersectionObserver-driven reveal to a section element.
  *  Mutation-aware: newly mounted .reveal nodes (e.g. filtered demo cards)
- *  are observed automatically. */
+ *  are observed automatically.
+ *
+ *  Progressive enhancement, never a blank page: if the observer cannot fire
+ *  (background tab, occluded window, very slow JS) the elements already in
+ *  the viewport are revealed after a short grace period, and everything is
+ *  revealed at once whenever the document is not visible. */
 export function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    const settle = (node: Element) => {
+      node.classList.remove('is-hidden');
+      node.classList.add('is-visible');
+    };
+    const revealAll = () => el.querySelectorAll('.reveal').forEach(settle);
+
+    // A hidden document paints nothing, so skip the choreography entirely.
+    if (document.visibilityState === 'hidden') {
+      revealAll();
+      return;
+    }
+
+    const vh = () => window.innerHeight || document.documentElement.clientHeight;
+
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            e.target.classList.add('is-visible');
+            settle(e.target);
             io.unobserve(e.target);
           }
         }
       },
       { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
     );
+
+    // Only elements that are genuinely below the fold are hidden, and only
+    // after JS is running — everything on screen is visible from first paint.
     const observeAll = () => {
-      el.querySelectorAll('.reveal:not(.is-visible)').forEach((n) => io.observe(n));
+      el.querySelectorAll<HTMLElement>('.reveal:not(.is-visible)').forEach((n) => {
+        if (!n.classList.contains('is-hidden')) {
+          const r = n.getBoundingClientRect();
+          const onScreen = r.top < vh() * 1.15 && r.bottom > 0;
+          if (onScreen) {
+            n.classList.add('is-visible');
+            return;
+          }
+          n.classList.add('is-hidden');
+        }
+        io.observe(n);
+      });
     };
     observeAll();
     const mo = new MutationObserver(observeAll);
     mo.observe(el, { childList: true, subtree: true });
+
+    // Safety net: nothing may stay hidden if the observer never fires.
+    const grace = window.setTimeout(() => {
+      const top = vh();
+      el.querySelectorAll<HTMLElement>('.reveal.is-hidden').forEach((n) => {
+        if (n.getBoundingClientRect().top < top) settle(n);
+      });
+    }, 1200);
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') revealAll();
+    };
+    document.addEventListener('visibilitychange', onVisible);
+
     return () => {
+      window.clearTimeout(grace);
+      document.removeEventListener('visibilitychange', onVisible);
       io.disconnect();
       mo.disconnect();
     };

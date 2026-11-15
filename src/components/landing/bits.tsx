@@ -174,7 +174,7 @@ export function GoldButton({
   className?: string;
 }) {
   const cls =
-    `inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-gold-400 to-gold-600 px-6 py-3 text-sm font-bold text-[#241b08] shadow-lg shadow-gold-900/30 transition-all hover:-translate-y-0.5 hover:from-gold-300 hover:to-gold-500 hover:shadow-xl hover:shadow-gold-800/40 active:translate-y-0 ${className}`;
+    `btn-shine inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-gold-400 to-gold-600 px-6 py-3 text-sm font-bold text-[#241b08] shadow-lg shadow-gold-900/30 transition-all hover:-translate-y-0.5 hover:from-gold-300 hover:to-gold-500 hover:shadow-xl hover:shadow-gold-800/40 active:translate-y-0 ${className}`;
   if (href) {
     return (
       <a href={href} className={cls}>

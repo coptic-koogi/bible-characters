@@ -18,13 +18,23 @@ import { cn } from '@/lib/utils';
 export function Header() {
   const { lang, copy, theme, setLang, toggleTheme } = useLanding();
   const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24);
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      setProgress(max > 8 ? Math.min(1, Math.max(0, doc.scrollTop / max)) : 0);
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, []);
 
   const nav = [
@@ -178,6 +188,13 @@ export function Header() {
           </a>
         </nav>
       ) : null}
+
+      {/* reading progress */}
+      <span
+        aria-hidden
+        className="progress-bar absolute bottom-0 start-0 h-px w-full bg-gradient-to-r from-gold-600 via-gold-300 to-gold-600"
+        style={{ transform: `scaleX(${progress})`, opacity: progress > 0.005 ? 1 : 0 }}
+      />
     </header>
   );
 }
