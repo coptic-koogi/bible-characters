@@ -11,7 +11,7 @@
 set -e
 
 USERNAME="${1:-}"
-REPO_NAME="${2:-bible-characters-landing}"
+REPO_NAME="${2:-bible-characters}"
 cd "$(dirname "$0")"
 
 echo "==> Bible Characters Landing — publisher"
@@ -57,8 +57,9 @@ git push -u origin main
 echo ""
 echo "✓ Pushed. Next steps:"
 echo "  1. Open the repo on GitHub → Settings → Pages"
-echo "  2. Source: 'GitHub Actions'  (the included workflow will deploy on every push)"
-echo "  3. Your page: https://<your-username>.github.io/$REPO_NAME/"
+echo "  2. Build and deployment → Source: 'GitHub Actions'  (the included workflow deploys on every push)"
+echo "  3. Wait for the 'Deploy to GitHub Pages' run to finish, then open:"
+echo "     https://<your-username>.github.io/$REPO_NAME/"
 echo ""
-echo "  Remember to replace USERNAME in src/lib/landing/links.ts with '$USERNAME'"
-echo "  so the header/footer GitHub buttons point to the right place."
+echo "  The base path is derived automatically from the repository name,"
+echo "  so no file needs editing when the repo is renamed."

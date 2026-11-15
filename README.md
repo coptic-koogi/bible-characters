@@ -4,10 +4,15 @@
 
 **نسخة ويب خفيفة من التطبيق، مصمَّمة خصيصاً كصفحة هبوط دعائية — ببيانات حقيقية من قاعدة بيانات التطبيق، وبأربع لغات كاملة.**
 
+🔗 **الصفحة المنشورة:** <https://good-man-developer.github.io/bible-characters/>
+📱 **التطبيق على Google Play:** <https://play.google.com/store/apps/details?id=com.coptickoogi.shakhsyat_elketab_elmokadaas>
+
 [![Languages](https://img.shields.io/badge/لغات-4%20(عربي%20·%20EN%20·%20FR%20·%20ES)-C9A75B?style=flat-square)](#)
 [![Characters](https://img.shields.io/badge/شخصيات%20موثَّقة-3%2C026-8A6D2F?style=flat-square)](#)
 [![Offline](https://img.shields.io/badge/يعمل%20دون%20اتصال-100%25-2A7B7E?style=flat-square)](#)
 [![License](https://img.shields.io/badge/ترخيص-MIT-C9A75B?style=flat-square)](LICENSE)
+
+[![لقطة من الصفحة](docs/screenshots/hero-ar-dark.png)](https://good-man-developer.github.io/bible-characters/)
 
 </div>
 
@@ -70,16 +75,21 @@ bun run dev        # أو: npm run dev
 
 ## 📦 النشر على GitHub Pages
 
-المستودع يتضمن workflow جاهزاً (`.github/workflows/deploy.yml`) — النشر **تلقائي عند كل دفع**:
+المستودع يتضمن workflow جاهزاً (`.github/workflows/deploy.yml`) — النشر **تلقائي عند كل دفع إلى `main`**:
 
 1. ارفع المستودع إلى حسابك (انظر `publish.sh` أدناه)
-2. من إعدادات المستودع: **Settings → Pages → Source: GitHub Actions**
-3. ستُبنى الصفحة تلقائياً وتُنشر على `https://<username>.github.io/bible-characters-landing/`
+2. من إعدادات المستودع: **Settings → Pages → Build and deployment → Source: GitHub Actions** ← هذه الخطوة إلزامية
+3. بعد أول تشغيل ناجح للـ workflow ستُبنى الصفحة وتُنشر على `https://<username>.github.io/<repo>/`
+
+> ⚠️ إذا كانت `Source` مضبوطة على «Deploy from a branch» فسيعرض GitHub ملف `README.md` فقط بدل الصفحة الحقيقية.
+
+المسار الفرعي (`/bible-characters`) يُحسب تلقائياً من اسم المستودع داخل الـ workflow، ويُمرَّر للبناء عبر `NEXT_PUBLIC_BASE_PATH` — لذلك لا حاجة لتحرير أي ملف عند تغيير اسم المستودع.
 
 للنشر اليدوي في أي استضافة ثابتة:
 
 ```bash
-bun run build:static   # ينتج مجلد out/ كاملاً وجاهزاً
+NEXT_PUBLIC_BASE_PATH="" npm run build   # ينتج مجلد out/ كاملاً وجاهزاً للنشر
+npx serve out                            # معاينة محلية للنسخة المبنية
 ```
 
 ### النشر إلى حسابك بأمر واحد
@@ -95,12 +105,12 @@ bash publish.sh USERNAME   # أو بدون gh بعد إنشاء مستودع ف�
 ├── .github/workflows/deploy.yml   # نشر GitHub Pages تلقائياً
 ├── src/
 │   ├── app/                       # الصفحة الوحيدة (layout + page + globals.css)
+│   │   └── fonts/                 # خطوط عربية/لاتينية مدمجة (woff2)
 │   ├── components/landing/        # 10 مكونات: هيدر، هيرو، ديمو، مزايا، لقطات…
 │   ├── data/landing-data.json     # 🔥 بيانات حقيقية (43 شخصية × 4 لغات)
 │   └── lib/landing/               # الترجمات (4 لغات) + طبقة البيانات + الروابط
 ├── public/
-│   ├── screenshots/               # 32 لقطة حقيقية (4 لغات × 8)
-│   └── fonts/                     # خطوط عربية مدمجة مضغوطة (woff2)
+│   └── screenshots/               # 32 لقطة حقيقية (4 لغات × 8)
 ├── scripts/                       # توليد البيانات والأصول من التطبيق الأصلي
 └── docs/screenshots/              # لقطات للتوثيق
 ```
@@ -110,7 +120,7 @@ bash publish.sh USERNAME   # أو بدون gh بعد إنشاء مستودع ف�
 | ماذا | أين |
 |---|---|
 | روابط المتاجر ومعرّف التطبيق | `src/lib/landing/links.ts` |
-| رابط GitHub (زر الهيدر/الفوتر) | `src/lib/landing/links.ts` — استبدل `USERNAME` |
+| رابط GitHub (زر الهيدر/الفوتر) | `src/lib/landing/links.ts` → `GITHUB_URL` |
 | نصوص الواجهة (4 لغات) | `src/lib/landing/i18n.ts` |
 | الألوان والثيمات | `src/app/globals.css` (متغيرات `--gold-*`) |
 | إعادة توليد البيانات من التطبيق | `scripts/gen_landing_data.py` (يحتاج مجلد بيانات التطبيق) |

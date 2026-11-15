@@ -1,20 +1,22 @@
 import type { NextConfig } from "next";
 
 /**
- * Static-export aware config.
- *  - `npm run dev`        → normal dev server
- *  - `npm run build`      → normal production build (self-hosting)
- *  - `npm run build:static` → `output: export` into ./out (GitHub Pages & any static host)
+ * Static-export config.
  *
- * When deploying under a sub-path (e.g. https://user.github.io/bible-characters-landing)
- * set NEXT_PUBLIC_BASE_PATH=/bible-characters-landing at build time.
+ * The landing page is a pure static site, so it always builds to ./out:
+ *  - `npm run dev`   → dev server (http://localhost:3000)
+ *  - `npm run build` → static export into ./out (GitHub Pages, Netlify, any CDN)
+ *
+ * Deploying under a sub-path (https://<user>.github.io/<repo>/) requires the
+ * prefix at build time, e.g.:
+ *   NEXT_PUBLIC_BASE_PATH=/bible-characters npm run build
+ * The GitHub Actions workflow sets it automatically from the repository name.
  */
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/+$/, "");
 
 const nextConfig: NextConfig = {
-  ...(process.env.STATIC_EXPORT === "1"
-    ? { output: "export", images: { unoptimized: true } }
-    : {}),
+  output: "export",
+  images: { unoptimized: true },
   ...(basePath ? { basePath, assetPrefix: basePath } : {}),
   reactStrictMode: false,
 };

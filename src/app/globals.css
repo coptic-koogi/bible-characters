@@ -1,0 +1,364 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ------------------------------------------------------------------ */
+/* Self-hosted fonts (subset to Arabic + Latin, woff2)                  */
+/* Relative URLs are bundled by Next into _next/static/media, so they   */
+/* keep resolving when the site is hosted under a sub-path (GH Pages).  */
+/* ------------------------------------------------------------------ */
+
+@font-face {
+  font-family: "Amiri";
+  src: url("./fonts/amiri-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Amiri";
+  src: url("./fonts/amiri-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Readex Pro";
+  src: url("./fonts/readex-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Readex Pro";
+  src: url("./fonts/readex-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Readex Pro";
+  src: url("./fonts/readex-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Readex Pro", "Amiri", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Amiri", "Readex Pro", ui-serif, serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-gold-100: var(--gold-100);
+  --color-gold-200: var(--gold-200);
+  --color-gold-300: var(--gold-300);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+  --color-gold-700: var(--gold-700);
+  --color-night: var(--night);
+  --color-night-card: var(--night-card);
+  --color-night-border: var(--night-border);
+  --color-parchment: var(--parchment);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* ------------------------------------------------------------------ */
+/* Palette — Coptic gold on parchment (light) / warm night (dark)      */
+/* ------------------------------------------------------------------ */
+
+:root {
+  --radius: 0.75rem;
+
+  /* gold scale */
+  --gold-100: #f7ecd0;
+  --gold-200: #f0dfae;
+  --gold-300: #e8ce8c;
+  --gold-400: #d9b96a;
+  --gold-500: #c9a75b;
+  --gold-600: #b08f4e;
+  --gold-700: #8a6d2f;
+
+  /* light (parchment) */
+  --parchment: #faf7f0;
+  --night: #14110b;
+  --night-card: #1d1912;
+  --night-border: #2e2818;
+
+  --background: #faf7f0;
+  --foreground: #2e2618;
+  --card: #fffdf7;
+  --card-foreground: #2e2618;
+  --popover: #fffdf7;
+  --popover-foreground: #2e2618;
+  --primary: #8a6d2f;
+  --primary-foreground: #fff9ec;
+  --secondary: #f1ead9;
+  --secondary-foreground: #4a3d26;
+  --muted: #f1ead9;
+  --muted-foreground: #7c6f55;
+  --accent: #f5eedb;
+  --accent-foreground: #4a3d26;
+  --destructive: #a3452e;
+  --border: #e6dcc6;
+  --input: #e6dcc6;
+  --ring: #c9a75b;
+  --chart-1: #c9a75b;
+  --chart-2: #8f7f55;
+  --chart-3: #6f5326;
+  --chart-4: #e8ce8c;
+  --chart-5: #4a3d26;
+  --sidebar: #faf7f0;
+  --sidebar-foreground: #2e2618;
+  --sidebar-primary: #8a6d2f;
+  --sidebar-primary-foreground: #fff9ec;
+  --sidebar-accent: #f1ead9;
+  --sidebar-accent-foreground: #4a3d26;
+  --sidebar-border: #e6dcc6;
+  --sidebar-ring: #c9a75b;
+}
+
+.dark {
+  --background: #14110b;
+  --foreground: #f1e8d2;
+  --card: #1d1912;
+  --card-foreground: #f1e8d2;
+  --popover: #201b13;
+  --popover-foreground: #f1e8d2;
+  --primary: #d9b96a;
+  --primary-foreground: #201805;
+  --secondary: #262015;
+  --secondary-foreground: #e5d9ba;
+  --muted: #262015;
+  --muted-foreground: #b3a687;
+  --accent: #2b2416;
+  --accent-foreground: #e5d9ba;
+  --destructive: #c9664a;
+  --border: #2e2818;
+  --input: #383022;
+  --ring: #c9a75b;
+  --chart-1: #e8ce8c;
+  --chart-2: #c9a75b;
+  --chart-3: #b08f4e;
+  --chart-4: #8a6d2f;
+  --chart-5: #f0dfae;
+  --sidebar: #14110b;
+  --sidebar-foreground: #f1e8d2;
+  --sidebar-primary: #d9b96a;
+  --sidebar-primary-foreground: #201805;
+  --sidebar-accent: #262015;
+  --sidebar-accent-foreground: #e5d9ba;
+  --sidebar-border: #2e2818;
+  --sidebar-ring: #c9a75b;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  ::selection {
+    background: var(--gold-300);
+    color: #241b08;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Landing utilities                                                   */
+/* ------------------------------------------------------------------ */
+
+/* gold gradient headline text */
+.text-gold-grad {
+  background: linear-gradient(100deg, #b08f4e 0%, #d9b96a 25%, #f3e2b3 50%, #d9b96a 75%, #b08f4e 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.dark .text-gold-grad {
+  background: linear-gradient(100deg, #c9a75b 0%, #e8ce8c 25%, #f9ecc8 50%, #e8ce8c 75%, #c9a75b 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.animate-sheen {
+  animation: sheen 5s linear infinite;
+}
+@keyframes sheen {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* soft radial night glow behind hero art */
+.night-glow {
+  background:
+    radial-gradient(600px 340px at 70% 20%, rgba(201, 167, 91, 0.16), transparent 65%),
+    radial-gradient(500px 300px at 20% 80%, rgba(201, 167, 91, 0.08), transparent 60%);
+}
+
+/* marquee (books ticker) */
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 90s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+[dir="rtl"] .marquee-track {
+  animation-name: marquee-rtl;
+}
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* floating chips */
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+.animate-floaty {
+  animation: floaty 5.5s ease-in-out infinite;
+}
+.animate-floaty-slow {
+  animation: floaty 7.5s ease-in-out infinite;
+}
+
+/* star rays slow rotation */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 60s linear infinite;
+}
+
+/* thin elegant scrollbars */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-600) transparent;
+}
+.scroll-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, var(--gold-600) 55%, transparent);
+  border-radius: 999px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* screenshots snap carousel */
+.shot-rail {
+  scroll-snap-type: x mandatory;
+}
+.shot-rail > * {
+  scroll-snap-align: center;
+}
+
+/* pattern: subtle 8-point star lattice for dark bands */
+.star-lattice {
+  background-image: radial-gradient(rgba(232, 206, 140, 0.07) 1px, transparent 1.4px);
+  background-size: 26px 26px;
+}
+
+/* focus visibility for a11y */
+:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+}
